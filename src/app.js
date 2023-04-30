@@ -3,9 +3,10 @@ import postRoutes from "./routes/post.route.js";
 import commentRoutes from "./routes/comment.routes.js";
 
 const app = express();
+const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
-  res.send("<hi>Hello<h1/>");
+  res.send({ message: "Hello from railway" });
 });
 
 app.listen(PORT, () => {
